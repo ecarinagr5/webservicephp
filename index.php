@@ -9,6 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
 
 //if use POST
 } else if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    
     echo json_encode($db->query("SELECT * FROM farmacias WHERE delegacion = $delegacion "));
 } else {
         http_response_code(405);
